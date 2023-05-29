@@ -1,0 +1,9 @@
+name: "Upload to AWS"
+description: "Upload file to AWS"
+author: MaximMatveev
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: hard-drive
+  color: green
