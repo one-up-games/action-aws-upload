@@ -19,7 +19,7 @@ aws s3 cp ${FILE} s3://${AWS_S3_BUCKET}${AWS_S3_PATH} \
             --region ${AWS_REGION} $*    
 else
 aws s3 sync ${FILE} s3://${AWS_S3_BUCKET}${AWS_S3_PATH} \
-            --region ${AWS_REGION} $*    
+            --region ${AWS_REGION} $* --delete
 fi
 
 status=$?
