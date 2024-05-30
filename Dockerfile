@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM public.ecr.aws/docker/library/python:3.8-alpine
 
 # https://github.com/aws/aws-cli/blob/master/CHANGELOG.rst
 ENV AWSCLI_VERSION='1.16.232'
