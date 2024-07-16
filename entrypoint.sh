@@ -16,10 +16,10 @@ max_attempts = 3" > ~/.aws/config
 
 if [ -f "${FILE}" ] ; then
 aws s3 cp ${FILE} s3://${AWS_S3_BUCKET}${AWS_S3_PATH} \
-            --region ${AWS_REGION} $* --cache-control max-age=1
+            --region ${AWS_REGION} $* --cache-control no-store
 else
 aws s3 sync ${FILE} s3://${AWS_S3_BUCKET}${AWS_S3_PATH} \
-            --region ${AWS_REGION} $* --delete --cache-control max-age=1
+            --region ${AWS_REGION} $* --delete --cache-control no-store
 fi
 
 status=$?
